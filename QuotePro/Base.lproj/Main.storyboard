@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uIh-5Y-To9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="CST-Le-knD">
+            <objects>
+                <tableViewController id="Otl-tj-LrO" customClass="HomescreenViewController" customModule="QuotePro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hjB-FZ-hOo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AVw-yf-JAM">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AVw-yf-JAM" id="01k-eb-vL5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Otl-tj-LrO" id="KFf-7w-anr"/>
+                            <outlet property="delegate" destination="Otl-tj-LrO" id="QSm-Oc-uRn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="ihu-pS-k8Z">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="NSB-1B-cdL">
+                            <connections>
+                                <segue destination="W8E-na-q3C" kind="show" id="rg2-9a-auL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gU6-yD-8NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="432"/>
+        </scene>
+        <!--Quote Builder View Controller-->
+        <scene sceneID="zQE-IO-Pu3">
+            <objects>
+                <viewController id="W8E-na-q3C" customClass="QuoteBuilderViewController" customModule="QuotePro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9AU-rR-V00"/>
+                        <viewControllerLayoutGuide type="bottom" id="7dx-y5-ahT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Bv-Pi-KOz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Randomize Image" id="Zh9-j7-2zv"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="70S-ao-6ib"/>
+                        <barButtonItem title="Randomize Quote" id="EnG-HL-l2R"/>
+                    </toolbarItems>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6q8-8X-41K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="432"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dnG-EP-TYy">
+            <objects>
+                <navigationController toolbarHidden="NO" id="uIh-5Y-To9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UDM-Oe-Yuy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NyW-j0-XhA">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Otl-tj-LrO" kind="relationship" relationship="rootViewController" id="8EB-De-4v0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCV-JP-glD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-502" y="432"/>
+        </scene>
+    </scenes>
+</document>
